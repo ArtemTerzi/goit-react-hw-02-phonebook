@@ -22,6 +22,7 @@ export class App extends Component {
   };
 
   removeContact = id => {
+    console.log(id);
     this.setState(({ contacts }) => ({
       contacts: contacts.filter(contact => contact.id !== id),
     }));
@@ -42,7 +43,11 @@ export class App extends Component {
     return (
       <Fragment>
         <h1>Phonebook</h1>
-        <ContactForm state={this.state} onSubmit={this.addContact} />
+        <ContactForm
+          state={this.state}
+          onSubmit={this.addContact}
+          handleChange={this.handleChange}
+        />
         <h2>Contacts</h2>
         <Filter state={this.state} handleChange={this.handleChange} />
         <ContactList

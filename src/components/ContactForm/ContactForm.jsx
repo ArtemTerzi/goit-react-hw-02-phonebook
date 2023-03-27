@@ -1,4 +1,4 @@
-// export const ContactForm = ({ state, handleChange, onAddToContactSubmit }) => (
+import PropTypes from 'prop-types';
 import { Component } from 'react';
 
 class ContactForm extends Component {
@@ -64,3 +64,9 @@ class ContactForm extends Component {
 }
 
 export default ContactForm;
+
+ContactForm.propTypes = {
+  handleChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  state: PropTypes.object.isRequired,
+};
