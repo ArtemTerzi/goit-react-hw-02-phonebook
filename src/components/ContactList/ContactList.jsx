@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
-import { ContactItem } from 'components/ContactItem/ContactItem';
+import ContactItem from 'components/ContactItem';
+import { Contacts } from './ContactList.styled';
 
 export const ContactList = ({ filteredContacts, removeContact }) => (
-  <ul>
+  <Contacts>
     {filteredContacts.map(({ id, name, number }) => (
       <ContactItem
         name={name}
@@ -12,7 +13,7 @@ export const ContactList = ({ filteredContacts, removeContact }) => (
         removeContact={removeContact}
       />
     ))}
-  </ul>
+  </Contacts>
 );
 
 ContactList.propTypes = {
