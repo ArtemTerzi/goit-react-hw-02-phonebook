@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 import { FilterLabel, FilterInput } from './Filter.styled';
 
-export const Filter = ({ state, handleChange }) => (
+export const Filter = ({ filter, handleChange }) => (
   <div>
     <FilterLabel htmlFor="filter">Find contacts by name</FilterLabel>
     <FilterInput
       type="text"
       name="filter"
       id="filter"
-      value={state.filter}
+      value={filter}
       onChange={handleChange}
     />
   </div>
@@ -16,5 +16,5 @@ export const Filter = ({ state, handleChange }) => (
 
 Filter.propTypes = {
   handleChange: PropTypes.func.isRequired,
-  state: PropTypes.object.isRequired,
+  filter: PropTypes.string.isRequired,
 };

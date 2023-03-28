@@ -19,5 +19,5 @@ export const ContactList = ({ filteredContacts, removeContact }) => (
 ContactList.propTypes = {
   filteredContacts: PropTypes.array.isRequired,
   removeContact: PropTypes.func.isRequired,
-  state: PropTypes.object.isRequired,
+  contacts: PropTypes.array.isRequired,
 };

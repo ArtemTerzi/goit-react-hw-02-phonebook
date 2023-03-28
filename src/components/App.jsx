@@ -44,7 +44,7 @@ export class App extends Component {
       >
         <h1>Phonebook</h1>
         <ContactForm
-          state={contacts}
+          contacts={contacts}
           onSubmit={this.addContact}
           handleChange={this.handleChange}
         />
@@ -55,9 +55,9 @@ export class App extends Component {
         >
           Contacts
         </h2>
-        <Filter state={filter} handleChange={this.handleChange} />
+        <Filter filter={filter} handleChange={this.handleChange} />
         <ContactList
-          state={contacts}
+          contacts={contacts}
           filteredContacts={this.getFilteredContacts()}
           removeContact={this.removeContact}
         />
